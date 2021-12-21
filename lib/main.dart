@@ -3,6 +3,7 @@
 import 'package:chat_demo/chatscreen.dart';
 import 'package:chat_demo/inbox.dart';
 import 'package:chat_demo/inbox11.dart';
+import 'package:chat_demo/signinscreen.dart';
 import 'package:flutter/material.dart';
 
 // import 'home_screen.dart';
@@ -30,7 +31,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Inbox(),
     );
   }
 }

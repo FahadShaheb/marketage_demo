@@ -1,4 +1,8 @@
+import 'dart:convert';
+
+import 'package:chat_demo/inbox.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -32,7 +36,13 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const InboxDemo(),
+              ),
+            );
+          },
           icon: const Icon(Icons.arrow_back_ios),
           color: Colors.white,
         ),

@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
 
+import 'package:chat_demo/chatscreen.dart';
 import 'package:flutter/material.dart';
 
 class InboxDemo extends StatefulWidget {
@@ -202,14 +203,6 @@ class _InboxDemoState extends State<InboxDemo> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                // const Text(
-                                //   "(1)",
-                                //   style: TextStyle(
-                                //     fontSize: 12,
-                                //     fontWeight: FontWeight.w800,
-                                //     color: Color(0xFF3359cc),
-                                //   ),
-                                // ),
                                 const Text(
                                   "13:54",
                                   style: TextStyle(
@@ -223,7 +216,6 @@ class _InboxDemoState extends State<InboxDemo> {
                             const SizedBox(
                               height: 10,
                             ),
-                            // ignore: avoid_unnecessary_containers
                             Container(
                               child: const Text(
                                 "Hello, I'm kakashi the copy ninja of Sharingan. I know approximately 1000 jutsu",
@@ -278,14 +270,6 @@ class _InboxDemoState extends State<InboxDemo> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                // const Text(
-                                //   "(10)",
-                                //   style: TextStyle(
-                                //     fontSize: 12,
-                                //     fontWeight: FontWeight.w800,
-                                //     color: Color(0xFF3359cc),
-                                //   ),
-                                // ),
                                 const Text(
                                   "13:54",
                                   style: TextStyle(
@@ -299,7 +283,6 @@ class _InboxDemoState extends State<InboxDemo> {
                             const SizedBox(
                               height: 10,
                             ),
-                            // ignore: avoid_unnecessary_containers
                             Container(
                               child: const Text(
                                 "Hello, I'm Jiraiya, one of the legendery Sanin. I'm the Hokage maker of konoha",
@@ -354,14 +337,6 @@ class _InboxDemoState extends State<InboxDemo> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                // const Text(
-                                //   "(3)",
-                                //   style: TextStyle(
-                                //     fontSize: 12,
-                                //     fontWeight: FontWeight.w800,
-                                //     color: Color(0xFF3359cc),
-                                //   ),
-                                // ),
                                 const Text(
                                   "13:54",
                                   style: TextStyle(
@@ -375,7 +350,6 @@ class _InboxDemoState extends State<InboxDemo> {
                             const SizedBox(
                               height: 10,
                             ),
-                            // ignore: avoid_unnecessary_containers
                             Container(
                               child: const Text(
                                 "Hello, I'm Tsunade Senju, one of the legendery Sanin. Direct descendant of Senju clan.",
@@ -395,6 +369,85 @@ class _InboxDemoState extends State<InboxDemo> {
               ],
             ),
           ),
+          Container(
+            height: 1,
+            color: Colors.black,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const ChatScreen()));
+            },
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 10,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(2),
+                          decoration: const BoxDecoration(
+                            boxShadow: [],
+                          ),
+                          child: const CircleAvatar(
+                            radius: 35,
+                            backgroundImage: AssetImage("image/kakashi.jpeg"),
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.72,
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                // ignore: prefer_const_literals_to_create_immutables
+                                children: [
+                                  const Text(
+                                    "Hatake Kakashi",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  const Text(
+                                    "13:54",
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                child: const Text(
+                                  "Hello, I'm kakashi the copy ninja of Sharingan. I know approximately 1000 jutsu",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 2,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
